@@ -74,7 +74,7 @@ struct MainScreen: View {
                             .foregroundColor(.red)
                     }
                     
-                    // Menú Desplegable (Overflow Menu / 3 puntos)
+                    // Menú Desplegable (Overflow Menu / 3 puntos con texto tipográfico visible)
                     Menu {
                         Button(action: {
                             dispararMensaje("Configuración seleccionada")
@@ -88,7 +88,8 @@ struct MainScreen: View {
                             Label("Acerca de", systemImage: "info.circle")
                         }
                     } label: {
-                        Image(systemName: "ellipsis.vertical")
+                        Text("⋮")
+                            .font(.system(size: 22, weight: .black))
                             .foregroundColor(.black)
                     }
                 }
